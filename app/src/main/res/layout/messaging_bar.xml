@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ID_done_my_message"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:padding="4dp"
+            app:srcCompat="@drawable/ic_done_tick">
+
+        </androidx.appcompat.widget.AppCompatImageView>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/ID_message_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/message"
+            android:layout_marginTop="4dp"
+
+            android:layout_toStartOf="@id/ID_done_my_message"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@drawable/color_cursor"
+            app:backgroundTint="@color/bnb_dark_blue_color"
+            android:imeOptions="actionNone"
+            android:minHeight="48dp"
+            />
+
+    </RelativeLayout>
+</androidx.appcompat.widget.Toolbar>

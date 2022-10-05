@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ID_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.gamesexchange.gamesexchange.activities.refers.ReferActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/ID_referral_toolbar"
+       style="@style/toolbar"
+        android:elevation="4dp"
+        app:titleTextColor="@color/white">
+
+
+        <RelativeLayout
+            android:layout_marginBottom="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:textColor="@color/white"
+                android:text="@string/refer_a_friend_only"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/ID_refers_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:text="0 "
+                android:layout_toStartOf="@id/ID_dummy_teamwork"
+                android:layout_centerVertical="true"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white" />
+
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ID_dummy_teamwork"
+                app:srcCompat="@drawable/ic_teamwork"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="6dp"
+                android:layout_alignParentEnd="true"
+                />
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        >
+
+        <TextView
+            android:id="@+id/ID_refer_code_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:text="@string/loading"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black"
+            android:layout_toStartOf="@id/ID_copy_image"
+            android:layout_alignParentStart="true"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ID_copy_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            app:srcCompat="@drawable/ic_copy_content" />
+
+    </RelativeLayout>
+
+
+
+    <com.gamesexchange.gamesexchange.views.CustomButtonView
+        android:id="@+id/ID_refer_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:minHeight="48dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/cornered_button"
+        android:gravity="center"
+        android:paddingEnd="4dp"
+        android:paddingStart="4dp"
+        android:text="@string/share"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:drawableStartCompat="@drawable/ic_share" />
+
+
+    <Button
+        android:id="@+id/ID_refer_choose_your_referral"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="@string/choose_your_referral"
+        android:textColor="@color/black" />
+
+
+    <RelativeLayout
+        android:id="@+id/ID_choosing_refer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/ID_choosing_refer_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/ID_choosing_refer_done"
+            android:textColor="@color/black"
+            android:background="@drawable/box"
+            android:hint="@string/who_invited_your"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:imeOptions="actionDone"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ID_choosing_refer_done"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="4dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_done_tick" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

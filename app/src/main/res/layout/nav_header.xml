@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_header"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@drawable/ac"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ID_my_profile_picture"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@drawable/dummy_user_icon_2"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/ID_my_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        tools:text="Mohaned Ashraf"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+        android:layout_below="@id/ID_my_profile_picture"/>
+
+
+    <TextView
+        android:id="@+id/ID_amazon_upload_photo_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/white"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:text="50%"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>

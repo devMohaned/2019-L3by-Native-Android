@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/ID_update_toolbar"
+            style="@style/toolbar"
+            app:title="@string/edit"
+            app:titleTextColor="@color/white">
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:visibility="visible"
+
+            app:srcCompat="@drawable/ic_controller_1" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:accessibilityLiveRegion="polite"
+                android:contentDescription="@string/firstName"
+                android:nextFocusDown="@+id/ID_reg_last_nam"
+                android:nextFocusForward="@+id/ID_reg_last_name"
+                android:nextFocusRight="@+id/ID_reg_last_name"
+                app:counterEnabled="true"
+                app:counterMaxLength="32"
+                app:counterTextAppearance="@style/HintText"
+                app:hintTextAppearance="@style/HintText">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/ID_update_first_name"
+                    style="@style/registerationBtn"
+                    android:hint="@string/firstName"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    android:nextFocusDown="@+id/ID_reg_last_nam"
+                    android:nextFocusForward="@+id/ID_reg_last_nam"
+                    android:nextFocusRight="@+id/ID_reg_last_name"
+                    app:backgroundTint="@color/bnb_dark_blue_color"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:accessibilityLiveRegion="polite"
+                android:contentDescription="@string/lastName"
+                android:nextFocusForward="@id/ID_reg_password"
+                app:counterEnabled="true"
+                app:counterMaxLength="32"
+                app:counterTextAppearance="@style/HintText"
+                app:hintTextAppearance="@style/HintText">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/ID_update_last_name"
+                    style="@style/registerationBtn"
+                    android:hint="@string/lastName"
+                    android:inputType="textPersonName"
+                    android:nextFocusForward="@id/ID_reg_password"
+                    app:backgroundTint="@color/bnb_dark_blue_color"
+
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp">
+
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/ID_update_location_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="4dp"
+                android:entries="@array/countries"
+                android:minHeight="48dp"
+                android:paddingEnd="4dp"
+                android:paddingStart="4dp" />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            >
+
+
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/ID_update_district_spinner"
+                android:layout_width="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:entries="@array/district_alexandria"
+                android:minHeight="48dp"
+                android:paddingEnd="4dp"
+                android:paddingStart="4dp"
+                android:layout_marginEnd="4dp"
+                />
+        </androidx.cardview.widget.CardView>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/registerTextField"
+            android:accessibilityLiveRegion="polite"
+            android:contentDescription="@string/email"
+            app:hintTextAppearance="@style/HintText">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/ID_update_email"
+                style="@style/registerationBtn"
+                android:clickable="false"
+                android:enabled="false"
+                android:inputType="textEmailAddress"
+                android:nextFocusForward="@id/ID_reg_phone_number"
+                android:text="@string/email_cannot_be_changed"
+                app:backgroundTint="@color/bnb_dark_blue_color" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/registerTextField"
+            android:accessibilityLiveRegion="polite"
+            android:contentDescription="@string/phone_number"
+            app:counterTextAppearance="@style/HintText"
+            app:hintTextAppearance="@style/HintText">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                style="@style/registerationBtn"
+                android:clickable="false"
+                android:enabled="false"
+                android:hint="@string/phone_number"
+                android:imeOptions="actionDone"
+                android:inputType="phone"
+                android:text="@string/phone_cannot_be_edited"
+                app:backgroundTint="@color/bnb_dark_blue_color" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/ID_update_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="8dp"
+            android:background="@drawable/cornered_button"
+            android:minHeight="48dp"
+            android:text="@string/update"
+            android:textColor="@color/white" />
+
+        <ProgressBar
+            android:id="@+id/ID_update_games_progress_bar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:theme="@style/AppTheme.WhiteAccent"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>

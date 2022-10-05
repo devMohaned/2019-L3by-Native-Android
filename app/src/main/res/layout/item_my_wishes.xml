@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="48dp">
+
+
+    <TextView
+        android:id="@+id/ID_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+          android:layout_alignParentStart="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_toStartOf="@id/ID_item_remove_my_wish"
+        android:textSize="20sp"
+        android:layout_centerVertical="true"
+        android:textColor="@android:color/black" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        app:srcCompat="@drawable/ic_delete"
+        android:id="@+id/ID_item_remove_my_wish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="false" />
+    <View
+        android:id="@+id/placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_active"
+        android:layout_below="@id/ID_item_name"
+        android:layout_marginTop="16dp">
+
+    </View>
+</RelativeLayout>

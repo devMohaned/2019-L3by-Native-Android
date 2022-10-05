@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/ID_register_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            app:titleTextColor="@color/white"
+            app:title="@string/create_account"
+            android:background="@color/bnb_dark_blue_color">
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                app:srcCompat="@drawable/ic_computer"
+                android:layout_width="0dp"
+                android:layout_height="96dp"
+                android:layout_weight="1"/>
+
+
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/ic_controller_1"
+            android:visibility="gone"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:accessibilityLiveRegion="polite"
+                android:contentDescription="@string/username"
+                android:labelFor="@+id/ID_reg_first_name"
+                android:nextFocusForward="@+id/ID_reg_last_name"
+                android:nextFocusRight="@+id/ID_reg_last_name"
+                android:nextFocusDown="@+id/ID_reg_last_nam"
+                app:counterEnabled="true"
+                app:counterMaxLength="32"
+                app:counterTextAppearance="@style/HintText"
+                app:hintTextAppearance="@style/HintText">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    app:backgroundTint="@color/bnb_dark_blue_color"
+                    android:id="@+id/ID_reg_first_name"
+                    style="@style/registerationBtn"
+                    android:hint="@string/firstName"
+                    android:inputType="textPersonName"
+                    android:imeOptions="actionNext"
+                    android:nextFocusForward="@+id/ID_reg_last_nam"
+                    android:nextFocusRight="@+id/ID_reg_last_name"
+                    android:nextFocusDown="@+id/ID_reg_last_nam"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:accessibilityLiveRegion="polite"
+                android:contentDescription="@string/username"
+                android:labelFor="@+id/ID_reg_last_name"
+                app:counterEnabled="true"
+                app:counterMaxLength="32"
+                app:hintTextAppearance="@style/HintText"
+                app:counterTextAppearance="@style/HintText"
+                android:nextFocusForward="@id/ID_reg_password"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    app:backgroundTint="@color/bnb_dark_blue_color"
+                    android:id="@+id/ID_reg_last_name"
+                    style="@style/registerationBtn"
+                    android:hint="@string/lastName"
+                    android:inputType="textPersonName"
+                    android:nextFocusForward="@id/ID_reg_password"
+
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <!--                    app:backgroundTint="@color/bnb_dark_blue_color"
+        -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/registerTextField"
+            android:accessibilityLiveRegion="polite"
+            android:contentDescription="@string/password"
+            android:labelFor="@+id/ID_reg_password"
+            app:hintTextAppearance="@style/HintText">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                app:backgroundTint="@color/bnb_dark_blue_color"
+                android:id="@+id/ID_reg_password"
+                style="@style/registerationBtn"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+              />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <CheckBox
+            android:id="@+id/ID_reg_checkbox_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:button="@drawable/checkbox_selector"
+            android:minHeight="48dp"
+            android:padding="8dp"
+            android:text="@string/show_password"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/registerTextField"
+            android:accessibilityLiveRegion="polite"
+            android:contentDescription="@string/email"
+            android:labelFor="@+id/ID_reg_email"
+            app:hintTextAppearance="@style/HintText">
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                app:backgroundTint="@color/bnb_dark_blue_color"
+
+                android:id="@+id/ID_reg_email"
+                style="@style/registerationBtn"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:nextFocusForward="@id/ID_reg_phone_number"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/registerTextField"
+            android:id="@+id/ID_phone_number_text_input"
+            android:accessibilityLiveRegion="polite"
+            android:contentDescription="@string/phone_number"
+            android:labelFor="@+id/ID_reg_phone_number"
+            app:counterEnabled="true"
+            app:counterMaxLength="11"
+            app:hintTextAppearance="@style/HintText"
+            app:counterTextAppearance="@style/HintText"
+            >
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+
+                app:backgroundTint="@color/bnb_dark_blue_color"
+                android:id="@+id/ID_reg_phone_number"
+                style="@style/registerationBtn"
+                android:digits="0123456789"
+                android:hint="@string/phone_number"
+                android:imeOptions="actionDone"
+                android:inputType="phone"
+                android:maxLength="11"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            >
+
+
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/ID_register_location_spinner"
+                android:layout_width="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:entries="@array/countries"
+                android:minHeight="48dp"
+                android:paddingEnd="4dp"
+                android:paddingStart="4dp"
+                android:layout_marginEnd="4dp"
+                />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            >
+
+
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/ID_register_district_spinner"
+                android:layout_width="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:entries="@array/district_alexandria"
+                android:minHeight="48dp"
+                android:paddingEnd="4dp"
+                android:paddingStart="4dp"
+                android:layout_marginEnd="4dp"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/registerTextField"
+
+            android:accessibilityLiveRegion="polite"
+            android:contentDescription="@string/promo_code"
+            android:labelFor="@+id/ID_reg_promo_code"
+            android:visibility="gone"
+            app:hintTextAppearance="@style/HintText">
+
+            <EditText
+                android:id="@+id/ID_reg_promo_code"
+                style="@style/registerationBtn"
+                android:hint="@string/promo_code"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/ID_by_signing_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/by_signing_up"
+                android:textColor="@color/black" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ID_by_signing_up"
+                android:layout_centerHorizontal="true">
+
+
+                <TextView
+                    android:id="@+id/ID_reg_terms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/terms_and_contitions_and"
+                    android:textColor="@color/black"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+
+                <TextView
+                    android:id="@+id/ID_reg_privacy_policy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/privacy_policy"
+                    android:textColor="@color/black"                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/ID_reg_terms_of_use"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/terms_of_use"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+
+        <Button
+            android:id="@+id/ID_reg_register_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="8dp"
+            android:minHeight="48dp"
+            android:text="@string/register"
+            android:background="@drawable/cornered_button"
+            android:textColor="@color/white" />
+
+        <ProgressBar
+            android:id="@+id/ID_reg_progress_bar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>

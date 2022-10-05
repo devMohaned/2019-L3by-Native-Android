@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gamesexchange.gamesexchange">
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/MyTheme">
+        <activity android:name=".activities.login.MVPLoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.settings.SettingsActivity" />
+        <activity android:name=".activities.register.MVPRegisterActivity" />
+        <activity android:name=".activities.homepage.MVPHomePageActivity" />
+        <activity android:name=".activities.noInternetConnection.NoInternetConnection" />
+        <activity android:name=".activities.messaging.UserListMessagesActivity" />
+        <activity android:name=".activities.messaging.MessagingActivity" />
+        <activity android:name=".activities.register.RegisterFailedActivity" />
+
+        <service
+            android:name=".services.AddingAllGamesService"
+            android:exported="false" />
+        <service
+            android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+            android:enabled="true" />
+        <service android:name=".services.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".services.MyFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/app_icon" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-7003413723788424~4521918965" />
+
+        <receiver android:name=".services.DailyLoginBroadCaster" />
+
+        <activity android:name=".activities.legals.PrivacyPolicyActivity" />
+        <activity android:name=".activities.legals.EulaActivity" />
+        <activity android:name=".activities.safetyRules.SaftyRulesActivity" />
+        <activity android:name=".activities.legals.TermsOfUseActivity" />
+        <activity android:name=".activities.reports.ReportActivity" />
+        <activity android:name=".activities.register.PhoneNumberVerificationActivity" />
+        <activity android:name=".activities.refers.ReferActivity" />
+        <activity android:name=".activities.trading.TradingUserActivity" />
+        <activity android:name=".activities.profile.ProfileActivity" />
+        <activity android:name=".activities.settings.UpdateUserData" />
+        <activity android:name=".activities.mygames.MyGamesActivity" />
+        <activity android:name=".activities.mywishes.MyWishesActivity" />
+        <activity android:name=".activities.user_states.UpdateActivity" />
+        <activity android:name=".activities.user_states.UnderMaintenanceActivity"/>
+        <!--<activity android:name=".activities.DummyActivity"/>-->
+    </application>
+
+</manifest>

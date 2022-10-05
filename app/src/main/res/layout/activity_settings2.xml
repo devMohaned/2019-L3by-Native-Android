@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/ID_my_settings_toolbar"
+                  style="@style/toolbar"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+
+                        <TextView
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white"
+                            android:id="@+id/ID_settings_toolbar_title"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings"/>
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ID_settings_fab"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:padding="8dp"
+                            android:layout_marginEnd="4dp"
+                            app:srcCompat="@drawable/ic_edit"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="124dp"
+                    android:layout_height="124dp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/ic_controller_1"
+                    android:layout_margin="4dp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            app:srcCompat="@drawable/ic_user_1"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:padding="8dp"/>
+
+                        <TextView
+                            android:id="@+id/ID_settings_my_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/my_name"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center_vertical"/>
+
+
+                    </LinearLayout>
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            app:srcCompat="@drawable/ic_mail"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:padding="8dp"/>
+
+                        <TextView
+                            android:id="@+id/ID_settings_my_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/my_email"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center_vertical"/>
+
+
+                    </LinearLayout>
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            app:srcCompat="@drawable/ic_phone_call"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:padding="8dp"/>
+
+                        <TextView
+                            android:id="@+id/ID_settings_my_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/my_phone"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center_vertical"/>
+
+
+                    </LinearLayout>
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            app:srcCompat="@drawable/ic_pin"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:padding="8dp"/>
+
+                        <TextView
+                            android:id="@+id/ID_settings_my_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/my_location"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center_vertical"/>
+
+
+                    </LinearLayout>
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            app:srcCompat="@drawable/ic_house"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:padding="8dp"/>
+
+                        <TextView
+                            android:id="@+id/ID_settings_my_district"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/my_district"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center_vertical"/>
+
+
+                    </LinearLayout>
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <com.gamesexchange.gamesexchange.views.CustomButtonView
+                    android:id="@+id/ID_sync_games"
+                    app:drawableStartCompat="@drawable/ic_sync"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cornered_button"
+                    android:text="@string/sync"
+                    android:drawablePadding="8dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/white"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="8dp"
+                    android:padding="12dp"/>
+
+                <ProgressBar
+                    android:id="@+id/ID_setting_progressbar"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+
+    </ScrollView>
+
+
+</FrameLayout>

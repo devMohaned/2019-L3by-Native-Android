@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    tools:context=".fragments.RewardsFragment"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <com.gamesexchange.gamesexchange.views.LuckyWheelView
+
+            android:id="@+id/luckyWheel"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            app:lkwBackgroundColor="@color/yellow"
+            app:lkwCenterImage="@drawable/ic_spiral"
+            app:lkwCursor="@drawable/ic_sort_down"
+            app:lkwTextColor="#263238" />
+
+
+
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/ID_rewards_games_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/orange_darker"
+                    android:layout_alignParentStart="true"
+                    android:text="0 GP"/>
+
+                <TextView
+                    android:id="@+id/ID_rewards_wishes_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="@color/orange_darker"
+                    android:layout_alignParentEnd="true"
+                    android:text="0 WP"/>
+
+                <Button
+                    android:id="@+id/spinBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/spin"
+                    android:visibility="visible"
+                    android:background="@drawable/cornered_button"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="4dp"
+                    />
+
+
+                <TextView
+                    android:layout_marginTop="24sp"
+                    android:id="@+id/ID_daily_login_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    tools:text="0"
+                    android:textSize="96sp" />
+
+                <TextView
+                    android:id="@+id/ID_daily_login_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="124sp"
+                    android:text="@string/consecutive_days"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"      android:layout_below="@id/ID_daily_login_text"
+                    android:enabled="false"
+                    android:id="@+id/ID_daily_login_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/collect_your_daily_points" />
+            </RelativeLayout>
+
+        </FrameLayout>
+
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp">
+
+
+
+
+            <Button
+                android:id="@+id/ID_get_more_points"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/watch_ad"
+                android:background="@drawable/cornered_button"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:textColor="@color/white"
+                android:layout_marginEnd="12dp"
+                android:textSize="16sp"
+                android:elevation="4dp"
+                android:text="@string/upto_fifty"/>
+
+
+        </FrameLayout>
+
+
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>
