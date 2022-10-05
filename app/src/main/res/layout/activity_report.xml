@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.reports.ReportActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/ID_report_toolbar"
+           style="@style/toolbar"
+            android:elevation="4dp"
+            app:title="@string/report_an_issue"
+            app:titleTextColor="@color/white">
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            app:backgroundTint="@color/bnb_dark_blue_color"
+            android:id="@+id/ID_report_issue_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ID_report_toolbar"
+            android:layout_margin="4dp"
+            android:hint="@string/title_issue"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textColor="@color/black"/>
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            app:backgroundTint="@color/bnb_dark_blue_color"
+            android:id="@+id/ID_report_issue_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ID_report_issue_title"
+            android:layout_margin="4dp"
+            android:hint="@string/the_issue"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/ID_report_button"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/ID_report_issue_text"
+            android:layout_margin="4dp"
+            android:minHeight="48dp"
+            android:text="@string/report" />
+
+
+        <Button
+            android:id="@+id/ID_report_cancel"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ID_report_issue_text"
+
+            android:layout_margin="4dp"
+            android:minHeight="48dp"
+            android:text="@string/cancel" />
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@+id/ID_md_gp2">
+        <item
+            android:id="@+id/ID_nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home" />
+    </group>
+
+    <group  android:id="@+id/ID_md_gp3">
+
+        <item
+            android:id="@+id/ID_nav_my_games"
+            android:icon="@drawable/ic_controller_2"
+            android:title="@string/my_games" />
+    </group>
+    <group  android:id="@+id/ID_md_gp4">
+
+        <item
+            android:id="@+id/ID_nav_my_wishes"
+            android:icon="@drawable/ic_like"
+            android:title="@string/my_wishes" />
+    </group>
+
+    <group android:id="@+id/ID_md_gp5">
+
+        <item
+
+            android:id="@+id/ID_nav_messages"
+            android:icon="@drawable/ic_chat"
+            android:title="@string/messages" />
+    </group>
+
+    <group android:id="@+id/ID_md_gp6">
+
+        <item
+
+            android:id="@+id/ID_nav_refer"
+            android:icon="@drawable/ic_card"
+            android:title="@string/referral" />
+    </group>
+
+    <group android:id="@+id/ID_md_gp7">
+
+        <item
+            android:id="@+id/ID_nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/settings" />
+    </group>
+
+    <group android:id="@+id/ID_md_gp8">
+
+        <item
+            android:id="@+id/ID_nav_terms"
+            android:icon="@drawable/ic_term"
+            android:title="@string/terms_of_use" />
+    </group>
+
+    <group android:id="@+id/ID_md_gp9">
+
+        <item
+            android:id="@+id/ID_nav_privacy_policy"
+            android:icon="@drawable/ic_lock"
+            android:title="@string/privacy_policy_header" />
+    </group>
+
+
+    <group android:id="@+id/ID_md_gp10">
+
+        <item
+            android:id="@+id/ID_nav_terms_and_conditions"
+            android:icon="@drawable/ic_term"
+            android:title="@string/terms_and_contitions" />
+    </group>
+
+    <group android:id="@+id/ID_md_gp11">
+
+        <item
+            android:id="@+id/ID_nav_report"
+            android:icon="@drawable/ic_complaint"
+            android:title="@string/report" />
+    </group>
+
+    <group android:id="@+id/ID_md_gp12">
+
+        <item
+            android:id="@+id/ID_nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/log_out" />
+    </group>
+
+
+</menu>

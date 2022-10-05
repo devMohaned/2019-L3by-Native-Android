@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ID_icon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/app_icon_large" />
+
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ID_icon"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:text="@string/wait_for_the_code"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/ID_txt_view_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sending_sms_to_phone_number"
+            android:textColor="@color/black"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_below="@id/textView"/>
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_below="@id/ID_txt_view_phone"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            app:backgroundTint="@color/bnb_dark_blue_color"
+            android:id="@+id/editTextCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/progressbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:digits="0123456789"
+            android:gravity="center"
+            android:hint="@string/enter_verification_code"
+            android:imeOptions="actionDone"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:minHeight="48dp"
+            android:textCursorDrawable="@drawable/color_cursor"
+            />
+
+        <Button
+            android:id="@+id/ID_pn_send_verification_sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextCode"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="@string/confirm"
+            android:background="@drawable/cornered_button"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            />
+
+        <ProgressBar
+            android:id="@+id/ID_reg_progress_bar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/ID_pn_send_verification_sign_in"
+            android:layout_centerHorizontal="true"
+            android:theme="@style/AppTheme.WhiteAccent"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/ID_setting_up_your_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ID_reg_progress_bar"
+            android:gravity="center"
+            android:text="@string/setting_your_account"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

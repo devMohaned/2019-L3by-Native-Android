@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:visibility="visible"
+    android:paddingBottom="2dp">
+
+    <FrameLayout
+        android:id="@+id/ID_image_frame_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ID_item_image_of_exchange"
+        android:src="@drawable/trevor"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="6dp"/>
+        <TextView
+
+            android:id="@+id/ID_item_online_circle_of_exchange"
+            android:background="@drawable/circle"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_margin="4dp"
+            android:layout_gravity="end|bottom"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/ID_item_name_of_exchange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/ID_image_frame_layout"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black"
+        tools:text="Ahmed Ibrahm" />
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/ID_item_location_of_exchange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/ID_image_frame_layout"
+        android:layout_below="@id/ID_item_name_of_exchange"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:textColor="@color/black"
+        tools:text="Alexandria" />
+
+
+
+
+        <TextView
+            android:layout_toEndOf="@id/ID_image_frame_layout"
+            android:id="@+id/ID_item_wanted_games_of_exchange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@color/black"
+            android:layout_below="@id/ID_item_location_of_exchange"
+            tools:text="Wanted Games: " />
+
+
+    <View
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:id="@+id/placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ID_item_wanted_games_of_exchange"
+        android:layout_marginTop="2dp"
+        android:background="@color/grey_active">
+
+    </View>
+
+</RelativeLayout>
