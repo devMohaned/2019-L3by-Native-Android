@@ -1,0 +1,4 @@
+Background Color (Light Blue) : 448ccb
+BottomNavBottom/Buttons (Dark Blue) : 0054a6
+Active Color: White
+Inactive Color: 448ccb
